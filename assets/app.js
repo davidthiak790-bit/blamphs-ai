@@ -3,8 +3,8 @@
  * Phase 2: flip USE_LIVE_API to true and set WORKER_URL to your Cloudflare Worker.
  */
 
-const USE_LIVE_API = false; // flip to true after deploying the Cloudflare Worker
-const WORKER_URL = "https://blamphs-anthropic-proxy.YOUR-SUBDOMAIN.workers.dev"; // replace YOUR-SUBDOMAIN after: cd worker && npx wrangler deploy
+const USE_LIVE_API = true; // wired to Cloudflare Worker
+const WORKER_URL = "https://blamphs-anthropic-proxy.davidthiak790.workers.dev";
 
 // ---------- ROI CALCULATOR ----------
 const fmt = (n) => "A$" + Math.round(n).toLocaleString("en-AU");
