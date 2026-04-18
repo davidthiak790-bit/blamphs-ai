@@ -48,7 +48,7 @@ export default {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "claude-3-5-haiku-20241022", // cheap + fast; the agent itself practices what it preaches
+          model: "claude-haiku-4-5", // current cheap+fast model; falls back to latest haiku
           max_tokens: 600,
           system: SYSTEM_PROMPT,
           messages: [{ role: "user", content: userMsg }],
