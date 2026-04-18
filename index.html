@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blamphs.ai — AI Token Optimisation for Australian Organisations</title>
+  <meta name="description" content="Cut your AI/LLM token spend by 40-70%. PEAS-framework agent that diagnoses prompt waste, context bloat, and verbosity across 12 industries. Built in Sydney." />
+  <meta name="theme-color" content="#0A1628" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#050D1A', 900: '#0A1628', 800: '#101F36', 700: '#1A2D4D', 600: '#2A4068' },
+            money: { 400: '#33FFAA', 500: '#00FF88', 600: '#00CC6E', 700: '#009954' },
+            ink: { 100: '#E8EEF7', 200: '#B8C4D6', 300: '#8595AE', 400: '#5B6B85' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-navy-950 text-ink-100 font-sans antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-navy-950/70 border-b border-navy-700/40">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-lg">
+      <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-money-500 to-money-700 flex items-center justify-center text-navy-950 font-black">B</span>
+      <span>blamphs<span class="text-money-500">.ai</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-ink-200">
+      <a href="#how" class="hover:text-money-500 transition">How it works</a>
+      <a href="#demo" class="hover:text-money-500 transition">Live demo</a>
+      <a href="#industries" class="hover:text-money-500 transition">Industries</a>
+      <a href="#pricing" class="hover:text-money-500 transition">Pricing</a>
+    </div>
+    <a href="#demo" class="px-4 py-2 rounded-lg bg-money-500 text-navy-950 font-semibold text-sm hover:bg-money-400 transition">Try the agent</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-money-500/5 via-transparent to-transparent"></div>
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-money-500/10 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto relative">
+    <div class="flex flex-col items-center text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-800 border border-money-500/30 text-xs text-money-400 mb-6">
+        <span class="w-2 h-2 rounded-full bg-money-500 animate-pulse"></span>
+        Built in Sydney · Privacy Act 1988 compliant · APRA-aware
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight max-w-4xl leading-[1.05]">
+        Your AI bill is <span class="text-money-500">40-70% waste</span>.
+        <br/>We find it. We fix it.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg md:text-xl text-ink-200 leading-relaxed">
+        Blamphs is a PEAS-framework agent that audits your LLM usage across prompts, context, and outputs — then ships the playbook to cut spend without touching quality.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#demo" class="px-6 py-3 rounded-lg bg-money-500 text-navy-950 font-semibold hover:bg-money-400 transition">Run a live diagnosis →</a>
+        <a href="#pricing" class="px-6 py-3 rounded-lg border border-navy-600 text-ink-100 font-semibold hover:border-money-500 transition">See pricing (AUD)</a>
+      </div>
+      <div class="mt-12 grid grid-cols-3 gap-8 md:gap-16 text-left">
+        <div><div class="text-3xl md:text-4xl font-black text-money-500">62%</div><div class="text-sm text-ink-300 mt-1">avg. token waste found</div></div>
+        <div><div class="text-3xl md:text-4xl font-black text-money-500">12</div><div class="text-sm text-ink-300 mt-1">industries supported</div></div>
+        <div><div class="text-3xl md:text-4xl font-black text-money-500">&lt;14d</div><div class="text-sm text-ink-300 mt-1">to first savings</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEAS FRAMEWORK -->
+<section id="how" class="py-20 px-6 border-t border-navy-800">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="text-money-500 text-sm font-semibold tracking-widest uppercase">Agent Architecture</div>
+      <h2 class="text-4xl md:text-5xl font-black mt-2">The PEAS framework, productised.</h2>
+      <p class="text-ink-200 mt-4 max-w-2xl mx-auto">Percepts, Environment, Actions, Goals — classic agent theory, operationalised for token economics.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition">
+        <div class="text-money-500 font-mono text-xs">P · PERCEPTS</div>
+        <h3 class="text-xl font-bold mt-2">Symptom scan</h3>
+        <p class="text-sm text-ink-300 mt-3">Live detection of prompt redundancy, context over-injection, output verbosity, and model mismatch.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition">
+        <div class="text-money-500 font-mono text-xs">E · ENVIRONMENT</div>
+        <h3 class="text-xl font-bold mt-2">12 verticals</h3>
+        <p class="text-sm text-ink-300 mt-3">Preconfigured for Healthcare, Legal, Finance, Retail, Gov, SaaS, EdTech, Media, Logistics, Insurance, Manufacturing, Energy.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition">
+        <div class="text-money-500 font-mono text-xs">A · ACTIONS</div>
+        <h3 class="text-xl font-bold mt-2">Diagnose → prescribe</h3>
+        <p class="text-sm text-ink-300 mt-3">Asks, tests, answers. Ships concrete playbooks: prompt rewrites, caching rules, routing, model downgrades.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition">
+        <div class="text-money-500 font-mono text-xs">G · GOALS</div>
+        <h3 class="text-xl font-bold mt-2">Minimise cost</h3>
+        <p class="text-sm text-ink-300 mt-3">Single objective. Measured in AUD saved per month, reported against your current baseline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section id="demo" class="py-20 px-6 border-t border-navy-800 bg-gradient-to-b from-navy-950 to-navy-900">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="text-money-500 text-sm font-semibold tracking-widest uppercase">Live Demo</div>
+      <h2 class="text-4xl md:text-5xl font-black mt-2">Talk to the agent.</h2>
+      <p class="text-ink-200 mt-4 max-w-2xl mx-auto">Describe your AI cost problem. Get a real diagnosis. No signup.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+      <!-- CHAT -->
+      <div class="lg:col-span-2 rounded-2xl bg-navy-900 border border-navy-700 overflow-hidden flex flex-col" style="min-height:560px">
+        <div class="px-5 py-3 border-b border-navy-700 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-money-500 animate-pulse"></span>
+            <span class="text-sm font-semibold">Blamphs Agent</span>
+            <span class="text-xs text-ink-300">· online</span>
+          </div>
+          <select id="industry" class="bg-navy-800 border border-navy-600 rounded-md text-xs px-2 py-1">
+            <option value="saas">SaaS</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="legal">Legal</option>
+            <option value="finance">Finance</option>
+            <option value="retail">Retail</option>
+            <option value="gov">Government</option>
+            <option value="edtech">EdTech</option>
+            <option value="media">Media</option>
+            <option value="logistics">Logistics</option>
+            <option value="insurance">Insurance</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="energy">Energy</option>
+          </select>
+        </div>
+        <div id="chat" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+        <div class="border-t border-navy-700 p-3 flex gap-2">
+          <input id="chat-input" type="text" placeholder="e.g. Our support bot costs $18k/month..." class="flex-1 bg-navy-800 border border-navy-600 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-money-500" />
+          <button id="chat-send" class="px-4 py-2 rounded-lg bg-money-500 text-navy-950 font-semibold text-sm hover:bg-money-400 transition">Send</button>
+        </div>
+      </div>
+
+      <!-- PERCEPTS PANEL -->
+      <div class="rounded-2xl bg-navy-900 border border-navy-700 p-5">
+        <div class="text-xs text-money-500 font-mono mb-3">PERCEPTS · LIVE</div>
+        <h3 class="font-bold mb-4">Symptom Scanner</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm mb-1"><span>Prompt redundancy</span><span id="p-redundancy" class="text-money-500 font-mono">—</span></div>
+            <div class="h-2 bg-navy-800 rounded-full overflow-hidden"><div id="b-redundancy" class="h-full bg-money-500 transition-all" style="width:0%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1"><span>Context over-injection</span><span id="p-context" class="text-money-500 font-mono">—</span></div>
+            <div class="h-2 bg-navy-800 rounded-full overflow-hidden"><div id="b-context" class="h-full bg-money-500 transition-all" style="width:0%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1"><span>Output verbosity</span><span id="p-verbosity" class="text-money-500 font-mono">—</span></div>
+            <div class="h-2 bg-navy-800 rounded-full overflow-hidden"><div id="b-verbosity" class="h-full bg-money-500 transition-all" style="width:0%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1"><span>Model mismatch</span><span id="p-model" class="text-money-500 font-mono">—</span></div>
+            <div class="h-2 bg-navy-800 rounded-full overflow-hidden"><div id="b-model" class="h-full bg-money-500 transition-all" style="width:0%"></div></div>
+          </div>
+        </div>
+        <div class="mt-6 pt-5 border-t border-navy-700">
+          <div class="text-xs text-ink-300 mb-1">Efficiency score</div>
+          <div class="flex items-baseline gap-2">
+            <span id="eff-score" class="text-4xl font-black text-money-500">—</span>
+            <span class="text-ink-300 text-sm">/ 100</span>
+          </div>
+          <div id="eff-label" class="text-xs text-ink-300 mt-1">Awaiting input…</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROI CALCULATOR -->
+    <div class="mt-6 rounded-2xl bg-navy-900 border border-navy-700 p-6 lg:p-8">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <div class="text-xs text-money-500 font-mono">GOALS · ROI CALCULATOR</div>
+          <h3 class="text-2xl font-bold mt-1">Cost Intelligence</h3>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-ink-300">Projected annual savings</div>
+          <div id="roi-annual" class="text-4xl font-black text-money-500">A$0</div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <label class="text-sm text-ink-200">Monthly AI spend (AUD)</label>
+          <input id="roi-spend" type="range" min="500" max="100000" step="500" value="15000" class="w-full mt-2 accent-money-500" />
+          <div class="flex justify-between text-xs text-ink-300 mt-1"><span>A$500</span><span id="roi-spend-val" class="text-money-500 font-mono">A$15,000</span><span>A$100k</span></div>
+        </div>
+        <div>
+          <label class="text-sm text-ink-200">Engineering team size</label>
+          <input id="roi-team" type="range" min="1" max="200" step="1" value="12" class="w-full mt-2 accent-money-500" />
+          <div class="flex justify-between text-xs text-ink-300 mt-1"><span>1</span><span id="roi-team-val" class="text-money-500 font-mono">12 engineers</span><span>200</span></div>
+        </div>
+        <div>
+          <label class="text-sm text-ink-200">Current efficiency</label>
+          <input id="roi-eff" type="range" min="10" max="90" step="5" value="40" class="w-full mt-2 accent-money-500" />
+          <div class="flex justify-between text-xs text-ink-300 mt-1"><span>10%</span><span id="roi-eff-val" class="text-money-500 font-mono">40%</span><span>90%</span></div>
+        </div>
+      </div>
+      <div class="mt-6 grid md:grid-cols-4 gap-4 pt-6 border-t border-navy-700">
+        <div><div class="text-xs text-ink-300">Monthly savings</div><div id="roi-monthly" class="text-2xl font-bold mt-1">A$0</div></div>
+        <div><div class="text-xs text-ink-300">Annual savings</div><div id="roi-annual2" class="text-2xl font-bold mt-1 text-money-500">A$0</div></div>
+        <div><div class="text-xs text-ink-300">Payback period</div><div id="roi-payback" class="text-2xl font-bold mt-1">—</div></div>
+        <div><div class="text-xs text-ink-300">3yr ROI</div><div id="roi-3yr" class="text-2xl font-bold mt-1">—</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="py-20 px-6 border-t border-navy-800">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="text-money-500 text-sm font-semibold tracking-widest uppercase">Environment</div>
+      <h2 class="text-4xl md:text-5xl font-black mt-2">12 industries. One agent.</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🏥</div><div class="font-bold mt-2">Healthcare</div><div class="text-xs text-ink-300 mt-1">PHI-aware redaction</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">⚖️</div><div class="font-bold mt-2">Legal</div><div class="text-xs text-ink-300 mt-1">Citation caching</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">💰</div><div class="font-bold mt-2">Finance</div><div class="text-xs text-ink-300 mt-1">APRA CPS 230 ready</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🛒</div><div class="font-bold mt-2">Retail</div><div class="text-xs text-ink-300 mt-1">Catalog dedup</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🏛️</div><div class="font-bold mt-2">Government</div><div class="text-xs text-ink-300 mt-1">IRAP-aligned</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">☁️</div><div class="font-bold mt-2">SaaS</div><div class="text-xs text-ink-300 mt-1">Multi-tenant routing</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🎓</div><div class="font-bold mt-2">EdTech</div><div class="text-xs text-ink-300 mt-1">Cohort caching</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">📰</div><div class="font-bold mt-2">Media</div><div class="text-xs text-ink-300 mt-1">Long-context budgets</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🚛</div><div class="font-bold mt-2">Logistics</div><div class="text-xs text-ink-300 mt-1">Routing JSON-mode</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🛡️</div><div class="font-bold mt-2">Insurance</div><div class="text-xs text-ink-300 mt-1">Claims summarisation</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">🏭</div><div class="font-bold mt-2">Manufacturing</div><div class="text-xs text-ink-300 mt-1">Spec extraction</div></div>
+      <div class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-money-500/50 transition"><div class="text-2xl">⚡</div><div class="font-bold mt-2">Energy</div><div class="text-xs text-ink-300 mt-1">Telemetry compression</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-20 px-6 border-t border-navy-800">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="text-money-500 text-sm font-semibold tracking-widest uppercase">Pricing · AUD</div>
+      <h2 class="text-4xl md:text-5xl font-black mt-2">Pays for itself in week one.</h2>
+      <p class="text-ink-200 mt-4">All plans billed monthly. GST inclusive. Cancel anytime.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-8 rounded-2xl bg-navy-900 border border-navy-700">
+        <div class="text-money-500 text-xs font-mono">STARTER</div>
+        <div class="mt-3"><span class="text-5xl font-black">A$499</span><span class="text-ink-300">/mo</span></div>
+        <p class="text-sm text-ink-200 mt-2">For teams spending &lt; A$5k/mo on AI.</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink-200">
+          <li>✓ Monthly token audit</li>
+          <li>✓ 1 environment / 1 model provider</li>
+          <li>✓ Prompt rewrite library</li>
+          <li>✓ Email support</li>
+        </ul>
+        <a href="mailto:hello@blamphs.ai?subject=Starter%20plan" class="block mt-6 text-center px-4 py-2 rounded-lg border border-navy-600 hover:border-money-500 transition font-semibold">Start free trial</a>
+      </div>
+      <div class="p-8 rounded-2xl bg-gradient-to-b from-money-500/10 to-navy-900 border-2 border-money-500 relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-money-500 text-navy-950 text-xs font-bold">MOST POPULAR</div>
+        <div class="text-money-500 text-xs font-mono">GROWTH</div>
+        <div class="mt-3"><span class="text-5xl font-black">A$1,490</span><span class="text-ink-300">/mo</span></div>
+        <p class="text-sm text-ink-200 mt-2">For teams spending A$5k–50k/mo.</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink-200">
+          <li>✓ Weekly audits + live dashboard</li>
+          <li>✓ Up to 5 environments / multi-provider</li>
+          <li>✓ Caching + routing playbooks</li>
+          <li>✓ Slack/Teams alerts</li>
+          <li>✓ Priority support, 4h SLA</li>
+        </ul>
+        <a href="mailto:hello@blamphs.ai?subject=Growth%20plan" class="block mt-6 text-center px-4 py-2 rounded-lg bg-money-500 text-navy-950 hover:bg-money-400 transition font-semibold">Get started</a>
+      </div>
+      <div class="p-8 rounded-2xl bg-navy-900 border border-navy-700">
+        <div class="text-money-500 text-xs font-mono">ENTERPRISE</div>
+        <div class="mt-3"><span class="text-5xl font-black">Custom</span></div>
+        <p class="text-sm text-ink-200 mt-2">Spending &gt; A$50k/mo, regulated industries, on-prem.</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink-200">
+          <li>✓ Continuous monitoring</li>
+          <li>✓ Unlimited environments</li>
+          <li>✓ APRA / IRAP / Privacy Act docs</li>
+          <li>✓ Sydney-region data residency</li>
+          <li>✓ Dedicated solutions engineer</li>
+        </ul>
+        <a href="mailto:enterprise@blamphs.ai?subject=Enterprise%20enquiry" class="block mt-6 text-center px-4 py-2 rounded-lg border border-navy-600 hover:border-money-500 transition font-semibold">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-6 border-t border-navy-800">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-black">Stop burning tokens.</h2>
+    <p class="text-ink-200 mt-4 text-lg">Free 14-day pilot. We surface the waste or you pay nothing.</p>
+    <a href="#demo" class="inline-block mt-8 px-8 py-4 rounded-lg bg-money-500 text-navy-950 font-bold text-lg hover:bg-money-400 transition">Run my diagnosis →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-navy-800 py-12 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <div class="font-bold text-lg flex items-center gap-2">
+        <span class="w-7 h-7 rounded-md bg-money-500 flex items-center justify-center text-navy-950 font-black">B</span>
+        blamphs<span class="text-money-500">.ai</span>
+      </div>
+      <p class="text-ink-300 mt-3">AI token optimisation for organisations across Australia and the world.</p>
+    </div>
+    <div>
+      <div class="font-semibold mb-3">Product</div>
+      <ul class="space-y-2 text-ink-300">
+        <li><a href="#how" class="hover:text-money-500">How it works</a></li>
+        <li><a href="#demo" class="hover:text-money-500">Live demo</a></li>
+        <li><a href="#pricing" class="hover:text-money-500">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold mb-3">Company</div>
+      <ul class="space-y-2 text-ink-300">
+        <li>Ironclad Equity Pty Ltd</li>
+        <li>ABN: 79 683 225 854</li>
+        <li>Sydney, Australia</li>
+        <li><a href="mailto:hello@blamphs.ai" class="hover:text-money-500">hello@blamphs.ai</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold mb-3">Legal</div>
+      <ul class="space-y-2 text-ink-300">
+        <li><a href="#" class="hover:text-money-500">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-money-500">Terms of Service</a></li>
+        <li>Privacy Act 1988 compliant</li>
+        <li>GDPR compliant</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-navy-800 text-xs text-ink-400 text-center">
+    © 2026 Ironclad Equity Pty Ltd. All rights reserved. Made in Sydney 🇦🇺
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
